@@ -1,0 +1,11 @@
+<h1> NEW To Do</h1>
+
+ <%= form_with model: @todo, local: true do |f| %>
+    <%= f.label :description, "nombre To Do" %>
+    <%= f.text_field :description %>
+
+    <%= f.submit "enviar" %>
+
+    <%end%>
+
+    <%= link_to 'back', todos_path %>
