@@ -1,5 +1,5 @@
 <h1> NEW To Do</h1>
-
+<br>
  <%= form_with model: @todo, local: true do |f| %>
     <%= f.label :description, "nombre To Do" %>
     <%= f.text_field :description %>
@@ -9,3 +9,4 @@
     <%end%>
 
     <%=link_to 'back', todos_path, class: 'btn btn-primary' %>
+    <br>

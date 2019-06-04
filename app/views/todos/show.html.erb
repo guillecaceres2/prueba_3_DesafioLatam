@@ -1,5 +1,5 @@
 <h1>SHOW To Do</h1>
-
+<br>
     <%=@todo.description %>
     <%if @todo.completed %>
         <p> 'tarea completada' <p>
@@ -8,3 +8,4 @@
         <% end %>
 
         <%=link_to 'back', todos_path, class: 'btn btn-primary' %>
+        <br>
