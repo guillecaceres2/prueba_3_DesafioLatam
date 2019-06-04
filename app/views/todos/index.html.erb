@@ -2,8 +2,11 @@
 <br>
 
 <br>
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
 <% @todos.each do |todo| %>
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 30rem;">
       <div class="card-body">
         <p class="card-text"><%= todo.description %></p>
         <p class="card-text"><%= todo.completed %></p>
@@ -14,6 +17,9 @@
         </div>
     </div>
     <% end %>
+    </div>
+    </div>
+    </div>
 
     <%=link_to 'New Work', todos_new_path, class: 'btn btn-primary' %>
     <%=link_to 'List', todos_list_path, class: 'btn btn-primary' %>
