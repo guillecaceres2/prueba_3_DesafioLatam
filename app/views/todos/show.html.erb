@@ -1,0 +1,8 @@
+<h1>SHOW To Do</h1>
+
+    <%=@todo.description %>
+    <%if @todo.completed %>
+        <p> 'tarea completada' <p>
+        <%else %>
+          <p> 'tarea pendiente' <p>
+        <% end %>

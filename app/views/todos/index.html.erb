@@ -5,6 +5,7 @@
       <div class="card-body">
         <p class="card-text"><%= todo.description %></p>
         <p class="card-text"><%= todo.completed %></p>
+        <%=link_to 'show', todo_path(todo), class: 'btn btn-primary' %>
         </div>
     </div>
     <% end %>
