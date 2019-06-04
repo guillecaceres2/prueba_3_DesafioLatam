@@ -1,38 +1,38 @@
 <h1>LIST</h1>
 <br>
-    <div class="row">
-    <div class=col-lg-6>
-    <% @todos.each do |todo| %>
-        <% if todo.completed == true %>
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <p class="card-text"><%= todo.description %></p>
-            <p class="card-text"><%= todo.completed %></p>
-            </div>
+<div class="container">
+<div class="row">
+<div class="col-lg-6">
+<% @todos.each do |todo| %>
+    <% if todo.completed == false %>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <p class="card-text"><%= todo.description %></p>
+        <p class="card-text"><%= todo.completed %></p>
         </div>
-        <% else %>  
-        <% nil %>
-        <% end %>  
-        <% end %>
     </div>
+    <% else %>  
+    <% nil %>
+    <% end %>
+    <% end %>
+</div>
+<div class="col-lg-6">
+<% @todos.each do |todo| %>
+    <% if todo.completed == true %>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <p class="card-text"><%= todo.description %></p>
+        <p class="card-text"><%= todo.completed %></p>
+        </div>
     </div>
+    <% else %>  
+    <% nil %>
+    <% end %>  
+    <% end %>
+</div>
+</div>
+</div>
 
-    <div class="row">
-    <div class=col-lg-6>
-    <% @todos.each do |todo| %>
-        <% if todo.completed == false %>
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <p class="card-text"><%= todo.description %></p>
-            <p class="card-text"><%= todo.completed %></p>
-            </div>
-        </div>
-        <% else %>  
-        <% nil %>
-        <% end %>
-        <% end %>
-    </div>
-    </div>
 
     <%=link_to 'back', todos_path, class: 'btn btn-primary' %>
     <br>
