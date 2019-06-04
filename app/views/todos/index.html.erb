@@ -7,9 +7,11 @@
         <p class="card-text"><%= todo.completed %></p>
         <%=link_to 'show', todo_path(todo), class: 'btn btn-primary' %>
         <%=link_to 'edit', edit_path(todo), class: 'btn btn-primary' %>
+        <%=link_to 'complete', completed_path(todo), class: 'btn btn-primary' %>
         <%=link_to 'delete', todo, method: :delete, class: 'btn btn-primary' %>
         </div>
     </div>
     <% end %>
 
-    <%= link_to 'Nueva Tarea', todos_new_path %>
+    <%=link_to 'New Work', todos_new_path, class: 'btn btn-primary' %>
+    
